@@ -26,6 +26,7 @@ class TestMainModule(unittest.TestCase):
         self.assertEqual(results[0]['date'], '2024-05-20 17:30:00')
         self.assertEqual(results[0]['title'], 'Orlandopreneur Monthly Happy Hour')
         self.assertEqual(results[0]['location'], 'Citrus Club, Orlando, FL')
+        self.assertEqual(results[0]['link'], 'https://www.meetup.com/orlandopreneur/events/296519348/')
 
         # You could redirect stdout to capture print output, or test other logic
         pass

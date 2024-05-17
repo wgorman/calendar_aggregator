@@ -1,4 +1,4 @@
-from meetup.meetup import downloadMeetupEvents
+from .meetup.meetup import downloadMeetupEvents
 def main():
     print("Hello, World!")
 

@@ -15,6 +15,15 @@ def parseEvent(soup):
     if event_div is None:
         return None
 
+    # Extract link
+    event_link = soup.find('a', href=True)
+
+    event_url = 'unknown'
+    # Extract the href attribute (event URL)
+    if event_link:
+        event_url = event_link['href']
+       
+
     # Extract date
     date = event_div.find('time').get_text(strip=True)
     
@@ -45,7 +54,8 @@ def parseEvent(soup):
         'date': str(date_obj),
         'title': title,
         'location': location,
-        'description': description
+        'description': description,
+        'link': event_url
     }
 
     # Convert the dictionary to a JSON string
